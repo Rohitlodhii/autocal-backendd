@@ -17,9 +17,9 @@ app = FastAPI(lifespan=lifespan)
 #Setting up the Cors middleware and allowing all origins
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://autocal-two.vercel.app"],  # Only allow this specific origin
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["*"],  # You can adjust this based on the methods you want to allow (GET, POST, etc.)
     allow_headers=["*"]
 )
 
